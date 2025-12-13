@@ -1,0 +1,10 @@
+IMPORTANT: Replace the placeholder logo files with your actual PNG images:
+
+1. Save the DMWS logo (the shield with red DMWS text) as:
+   c:\Users\murpa\Documents\GitHub\dmws\public\dmws-logo.png
+
+2. Save the Hizb E Abbasi logo (the circular badge with horse) as:
+   c:\Users\murpa\Documents\GitHub\dmws\public\hizb-logo.png
+
+The webpage is already configured to use these exact filenames and locations.
+After adding the images, refresh your browser to see them appear!
