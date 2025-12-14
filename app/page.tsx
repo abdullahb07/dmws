@@ -126,7 +126,7 @@ function HeroSection() {
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] bg-clip-text text-transparent block">
-              DHULE MEGA
+              DHULIA MEGA
             </span>
             <span className="bg-gradient-to-r from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a] bg-clip-text text-transparent block">
               WINTER SPORTS
@@ -352,11 +352,11 @@ function StatsSection() {
     { icon: Trophy, value: '2', label: 'Days of Action', color: '#dc2626' },
     { icon: Users, value: '100+', label: 'Players Expected', color: '#1e3a8a' },
     { icon: Target, value: '2', label: 'Sports Events', color: '#dc2626' },
-    { icon: Shield, value: '₹30K+', label: 'Prize Pool', color: '#1e3a8a' },
+    { icon: Shield, value: '₹30K+', label: 'Exciting Gifts & Fun', color: '#1e3a8a' },
   ];
 
   return (
-    <section className="relative py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-28 sm:py-32 lg:py-36 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1e3a8a]/30 to-transparent"></div>
       
@@ -414,14 +414,14 @@ function CaptainsSection() {
   const captains = [
     { name: 'Mohammad Bhai Patel', id: 1 },
     { name: 'Hussain Bhai Bandukwala', id: 2 },
-    { name: 'Murtaza Bhai Bharmmal', id: 3 },
+    { name: 'Murtaza Bhai Bharmal', id: 3 },
     { name: 'Abdeali Sadriwala', id: 4 },
     { name: 'Abbas Bhai Jawadwala', id: 5 },
     { name: 'Abbas Bhai Saifee', id: 6 },
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -648,7 +648,7 @@ function VenueSection() {
           </h2>
           <div className="space-y-2">
             <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#10b981]">
-              MH 18 Turf Dhule
+              MH 18 Turf Dhulia
             </p>
             <p className="text-gray-400 text-base sm:text-lg">📍 Premier sports turf with world-class facilities</p>
           </div>
@@ -680,9 +680,9 @@ function VenueSection() {
             <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
               <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-[#10b981] flex-shrink-0 sm:mt-1" />
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">MH 18 Turf Dhule</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">MH 18 Turf Dhulia</h3>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
-                  Premium turf facility featuring state-of-the-art cricket pitch and professional badminton courts - your ultimate destination for competitive sports in Dhule.
+                  Premium turf facility featuring state-of-the-art cricket pitch and professional badminton courts - your ultimate destination for competitive sports in Dhulia.
                 </p>
                 <a 
                   href="https://share.google/ys3Li6RwaMxOq88Zc"
@@ -711,7 +711,7 @@ function FAQSection() {
     },
     {
       question: 'When is the tournament?',
-      answer: 'The tournament will be held on 27th and 28th December 2025 at MH 18 Turf Dhule.'
+      answer: 'The tournament will be held on 27th and 28th December 2025 at MH 18 Turf Dhulia.'
     },
     {
       question: 'What should I bring?',
@@ -990,7 +990,7 @@ function Footer() {
 
           {/* Text */}
           <p className="text-gray-400 mb-2 text-sm sm:text-base font-bold" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
-            DHULE MEGA WINTER SPORTS 2025
+            DHULIA MEGA WINTER SPORTS 2025
           </p>
           <p className="text-gray-500 text-xs sm:text-sm mb-5 sm:mb-6">
             Unity through Sports ⭐
