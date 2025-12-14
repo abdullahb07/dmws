@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Trophy, Users, MapPin, Calendar, Shield, Target, ChevronRight, AlertCircle } from 'lucide-react';
+import { Trophy, Users, MapPin, Calendar, Shield, Target, ChevronRight, AlertCircle, Instagram } from 'lucide-react';
 import Image from 'next/image';
 
 // Animation variants
@@ -42,6 +42,9 @@ export default function Home() {
       
       {/* FAQ Section */}
       <FAQSection />
+      
+      {/* Instagram Follow Section */}
+      <InstagramSection />
       
       {/* Contact Section */}
       <ContactSection />
@@ -781,6 +784,143 @@ function FAQSection() {
               </p>
             </motion.div>
           ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// Instagram Section Component
+function InstagramSection() {
+  const instagramAccounts = [
+    {
+      name: 'DMWS 2025',
+      handle: '@dmws2025',
+      description: 'Official tournament updates, live scores, highlights & announcements',
+      url: 'https://www.instagram.com/dmws2025?igsh=MXJna24zbnEyZDhwaA==',
+      color: '#dc2626',
+      gradient: 'from-[#dc2626] via-[#ef4444] to-[#dc2626]'
+    },
+    {
+      name: 'Hizb E Abbasi',
+      handle: '@hizb_e_abbasi',
+      description: 'Stay connected with our community, events & social initiatives',
+      url: 'https://www.instagram.com/hizb_e_abbasi?igsh=MTlnajN0ZmQwd3VjeQ==',
+      color: '#1e3a8a',
+      gradient: 'from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a]'
+    }
+  ];
+
+  return (
+    <section className="relative py-24 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#dc2626]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-[#1e3a8a]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Section Header */}
+        <motion.div
+          className="text-center mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#dc2626] to-[#1e3a8a]"></div>
+            <Instagram className="w-10 h-10 text-[#dc2626] animate-pulse" />
+            <div className="h-px w-16 bg-gradient-to-r from-[#1e3a8a] via-[#dc2626] to-transparent"></div>
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+            <span className="bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#1e3a8a] bg-clip-text text-transparent">
+              FOLLOW US ON INSTAGRAM
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            ❤️ Show some love • 📸 Stay updated • 🔔 Never miss a moment
+          </p>
+        </motion.div>
+
+        {/* Instagram Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
+          {instagramAccounts.map((account, index) => (
+            <motion.a
+              key={index}
+              href={account.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+            >
+              {/* Card Background */}
+              <div className="relative glass rounded-3xl p-8 sm:p-10 border-2 border-gray-700 group-hover:border-opacity-0 transition-all duration-500 overflow-hidden">
+                {/* Animated Gradient Border */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${account.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl p-[2px]`}>
+                  <div className="w-full h-full bg-[#0a1128] rounded-3xl"></div>
+                </div>
+
+                {/* Shimmer Effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Instagram Icon */}
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${account.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}>
+                    <Instagram className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                  </div>
+
+                  {/* Account Name */}
+                  <h3 className="text-2xl sm:text-3xl font-black mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em', color: account.color }}>
+                    {account.name}
+                  </h3>
+
+                  {/* Handle */}
+                  <p className={`text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r ${account.gradient} bg-clip-text text-transparent`}>
+                    {account.handle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-gray-400 text-base sm:text-lg mb-6 leading-relaxed">
+                    {account.description}
+                  </p>
+
+                  {/* Follow Button */}
+                  <div className={`relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r ${account.gradient} rounded-full font-bold text-white group-hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden`}>
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                    <Instagram className="w-5 h-5 relative z-10" />
+                    <span className="relative z-10 text-lg" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>FOLLOW NOW</span>
+                    <ChevronRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
+
+                {/* Decorative Corner Accents */}
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${account.gradient} opacity-10 blur-3xl rounded-full group-hover:opacity-20 transition-opacity duration-500`}></div>
+                <div className={`absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr ${account.gradient} opacity-10 blur-2xl rounded-full group-hover:opacity-20 transition-opacity duration-500`}></div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          className="text-center mt-12 sm:mt-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
+          <p className="text-xl sm:text-2xl font-bold text-transparent bg-gradient-to-r from-[#dc2626] via-white to-[#1e3a8a] bg-clip-text mb-4" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+            🎯 Join the Community • 🏆 Get Exclusive Updates • 🎉 Be Part of the Action
+          </p>
+          <p className="text-gray-400 text-sm sm:text-base">
+            Tag us in your stories and posts using <span className="text-[#dc2626] font-bold">#DMWS2025</span> & <span className="text-[#1e3a8a] font-bold">#HizbEAbbasi</span>
+          </p>
         </motion.div>
       </div>
     </section>
