@@ -57,18 +57,18 @@ function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
       {/* Animated background gradient with sporty elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1128] via-[#1e3a8a] to-[#0a1128]">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxZTI5M2IiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTMwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         {/* Gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1128] via-transparent to-transparent"></div>
         {/* Floating sporty elements - larger and more dynamic */}
-        <div className="absolute top-20 left-10 w-40 h-40 bg-[#fbbf24] rounded-full opacity-10 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-[#10b981] rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-[#dc2626] rounded-full opacity-10 blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-[#fbbf24] rounded-full opacity-5 blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-20 left-10 w-40 h-40 bg-[#dc2626] rounded-full opacity-15 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-[#ef4444] rounded-full opacity-15 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-[#1e3a8a] rounded-full opacity-15 blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-[#dc2626] rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
         {/* Animated streaks */}
-        <div className="absolute top-0 left-0 w-1 h-32 bg-gradient-to-b from-[#fbbf24] to-transparent opacity-20 animate-pulse"></div>
-        <div className="absolute top-0 right-20 w-1 h-24 bg-gradient-to-b from-[#10b981] to-transparent opacity-20 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-0 left-0 w-1 h-32 bg-gradient-to-b from-[#dc2626] to-transparent opacity-30 animate-pulse"></div>
+        <div className="absolute top-0 right-20 w-1 h-24 bg-gradient-to-b from-[#ef4444] to-transparent opacity-30 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
@@ -81,14 +81,14 @@ function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             {/* Glow effect behind banner */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#dc2626] to-[#fbbf24] opacity-20 blur-xl rounded-full"></div>
-            <div className="relative inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] rounded-full border-2 border-[#fbbf24] shadow-2xl animate-pulse" style={{ animationDuration: '3s' }}>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#dc2626] to-[#ef4444] opacity-30 blur-xl rounded-full"></div>
+            <div className="relative inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] rounded-full border-2 border-white shadow-2xl animate-pulse" style={{ animationDuration: '3s' }}>
               <div className="relative">
                 <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 {/* Ping animation */}
                 <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fbbf24] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#fbbf24]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                 </span>
               </div>
               <div className="text-left">
@@ -133,16 +133,16 @@ function HeroSection() {
 
           {/* Main Headline */}
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 px-4"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 px-4" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent block">
-              Dhule Mega
+            <span className="bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] bg-clip-text text-transparent block">
+              DHULE MEGA
             </span>
-            <span className="bg-gradient-to-r from-[#10b981] via-[#34d399] to-[#10b981] bg-clip-text text-transparent block">
-              Winter Sports
+            <span className="bg-gradient-to-r from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a] bg-clip-text text-transparent block">
+              WINTER SPORTS
             </span>
             <span className="text-white text-3xl sm:text-4xl md:text-5xl block mt-2">2025</span>
           </motion.h1>
@@ -154,7 +154,7 @@ function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Organized by <span className="text-[#10b981] font-semibold">Hizb E Abbasi</span>
+            Organized by <span className="text-[#dc2626] font-bold">Hizb E Abbasi Dhulia</span>
           </motion.p>
 
           <motion.p 
@@ -175,7 +175,7 @@ function HeroSection() {
           >
             <a 
               href="#registration"
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fbbf24] rounded-full font-bold text-base sm:text-lg text-black hover:scale-110 transition-all duration-300 glow-gold flex items-center justify-center gap-2 w-full sm:flex-1 overflow-hidden"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 glow-red flex items-center justify-center gap-2 w-full sm:flex-1 overflow-hidden"
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -186,7 +186,7 @@ function HeroSection() {
             
             <a 
               href="#registration"
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#10b981] via-[#34d399] to-[#10b981] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 glow-emerald flex items-center justify-center gap-2 w-full sm:flex-1 overflow-hidden"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 glow-navy flex items-center justify-center gap-2 w-full sm:flex-1 overflow-hidden"
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -224,8 +224,8 @@ function AboutSection() {
   return (
     <section className="relative py-24 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-10 right-0 w-64 h-64 bg-[#fbbf24] rounded-full opacity-5 blur-3xl"></div>
-      <div className="absolute bottom-10 left-0 w-72 h-72 bg-[#10b981] rounded-full opacity-5 blur-3xl"></div>
+      <div className="absolute top-10 right-0 w-64 h-64 bg-[#dc2626] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-10 left-0 w-72 h-72 bg-[#1e3a8a] rounded-full opacity-10 blur-3xl"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -236,13 +236,13 @@ function AboutSection() {
         >
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#fbbf24] to-[#fbbf24] rounded-full"></div>
-            <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-[#fbbf24]" />
-            <div className="h-1 w-16 sm:w-24 bg-gradient-to-l from-transparent via-[#10b981] to-[#10b981] rounded-full"></div>
+            <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#dc2626] to-[#dc2626] rounded-full"></div>
+            <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-[#dc2626]" />
+            <div className="h-1 w-16 sm:w-24 bg-gradient-to-l from-transparent via-[#dc2626] to-[#dc2626] rounded-full"></div>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 sm:mb-4">
-            <span className="bg-gradient-to-r from-[#fbbf24] to-[#10b981] bg-clip-text text-transparent">
-              About the Tournament
+            <span className="bg-gradient-to-r from-[#dc2626] to-[#1e3a8a] bg-clip-text text-transparent">
+              ABOUT THE TOURNAMENT
             </span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg">Rules & Guidelines</p>
@@ -252,7 +252,7 @@ function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {/* Fair Play Policy - Highlighted */}
           <motion.div
-            className="md:col-span-2 glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#fbbf24] relative overflow-hidden"
+            className="md:col-span-2 glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#dc2626] relative overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -267,12 +267,12 @@ function AboutSection() {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#fbbf24] mb-3 sm:mb-4 flex items-center gap-2">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#dc2626] mb-3 sm:mb-4 flex items-center gap-2">
                   Fair Play Policy
                 </h3>
                 <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
                   Teams are selected by the organizers via a <span className="font-bold text-white bg-white/5 px-2 py-1 rounded">draft system</span>. 
-                  While you can <span className="font-bold text-white bg-white/5 px-2 py-1 rounded">request a captain</span>, the organizer&apos;s decision is <span className="font-bold text-[#fbbf24] bg-[#fbbf24]/10 px-2 py-1 rounded">final</span>. 
+                  While you can <span className="font-bold text-white bg-white/5 px-2 py-1 rounded">request a captain</span>, the organizer&apos;s decision is <span className="font-bold text-[#dc2626] bg-[#dc2626]/10 px-2 py-1 rounded">final</span>. 
                   This ensures balanced teams and fair competition for all participants.
                 </p>
               </div>
@@ -287,7 +287,7 @@ function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#10b981] to-[#059669] flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6] flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
               <Target className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">Tournament Format</h3>
@@ -298,7 +298,7 @@ function AboutSection() {
 
           {/* Eligibility */}
           <motion.div
-            className="glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 hover:border-[#fbbf24] border-2 border-gray-700 transition-all duration-300 h-full flex flex-col group hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]"
+            className="glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 hover:border-[#dc2626] border-2 border-gray-700 transition-all duration-300 h-full flex flex-col group hover:shadow-[0_0_30px_rgba(220,38,38,0.3)]"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -309,7 +309,7 @@ function AboutSection() {
             </div>
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">Eligibility</h3>
             <div className="space-y-2 text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-              <p><span className="font-semibold text-[#fbbf24]">🏏 Cricket:</span> Men 17+ years old</p>
+              <p><span className="font-semibold text-[#dc2626]">🏏 Cricket:</span> Men 17+ years old</p>
               <p><span className="font-semibold text-[#10b981]">🏸 Badminton:</span> Women of all ages & Boys U-16</p>
             </div>
           </motion.div>
@@ -363,15 +363,15 @@ function AboutSection() {
 function StatsSection() {
   const stats = [
     { icon: Trophy, value: '2', label: 'Days of Action', color: '#dc2626' },
-    { icon: Users, value: '100+', label: 'Players Expected', color: '#fbbf24' },
-    { icon: Target, value: '2', label: 'Sports Events', color: '#10b981' },
-    { icon: Shield, value: '₹30K+', label: 'Prize Pool', color: '#3b82f6' },
+    { icon: Users, value: '100+', label: 'Players Expected', color: '#1e3a8a' },
+    { icon: Target, value: '2', label: 'Sports Events', color: '#dc2626' },
+    { icon: Shield, value: '₹30K+', label: 'Prize Pool', color: '#1e3a8a' },
   ];
 
   return (
     <section className="relative py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1e293b]/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1e3a8a]/30 to-transparent"></div>
       
       <motion.div
         className="max-w-7xl mx-auto relative z-10"
@@ -468,25 +468,25 @@ function CaptainsSection() {
           {captains.map((captain, index) => (
             <motion.div
               key={captain.id}
-              className="relative glass rounded-2xl p-8 sm:p-10 hover:scale-110 transition-all duration-500 group cursor-pointer border-2 border-gray-700 hover:border-[#fbbf24] h-full flex flex-col items-center justify-center overflow-hidden hover:shadow-[0_0_40px_rgba(251,191,36,0.4)]"
+              className="relative glass rounded-2xl p-8 sm:p-10 hover:scale-110 transition-all duration-500 group cursor-pointer border-2 border-gray-700 hover:border-[#dc2626] h-full flex flex-col items-center justify-center overflow-hidden hover:shadow-[0_0_40px_rgba(220,38,38,0.4)]"
               variants={fadeInUp}
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#fbbf24]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               {/* Captain Number Badge */}
               <div className="mb-4 relative">
                 {/* Pulse ring on hover */}
-                <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-30 group-hover:scale-150 transition-all duration-500 blur-md"></div>
-                <div className="relative inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#fbbf24] via-[#f59e0b] to-[#fbbf24] text-white font-black text-lg sm:text-xl group-hover:glow-gold transition-all group-hover:rotate-12 shadow-lg">
+                <div className="absolute inset-0 rounded-full bg-[#dc2626] opacity-0 group-hover:opacity-30 group-hover:scale-150 transition-all duration-500 blur-md"></div>
+                <div className="relative inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#dc2626] via-[#ef4444] to-[#dc2626] text-white font-black text-lg sm:text-xl group-hover:glow-red transition-all group-hover:rotate-12 shadow-lg">
                   {index + 1}
                 </div>
               </div>
 
               {/* Captain Name */}
-              <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-center text-white group-hover:text-[#fbbf24] transition-colors leading-tight">
+              <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-center text-white group-hover:text-[#dc2626] transition-colors leading-tight">
                 {captain.name}
                 {/* Animated underline */}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] group-hover:w-full transition-all duration-500"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#dc2626] to-[#ef4444] group-hover:w-full transition-all duration-500"></span>
               </h3>
               
               {/* Caption */}
@@ -534,16 +534,16 @@ function RegistrationSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Cricket Card */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#fbbf24] hover:scale-105 transition-all duration-500 glow-gold overflow-hidden"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#dc2626] hover:scale-105 transition-all duration-500 glow-red overflow-hidden"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Animated gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#fbbf24]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             {/* Corner accent */}
-            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#fbbf24] to-transparent opacity-20 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#dc2626] to-transparent opacity-20 rounded-bl-full"></div>
             <div className="relative flex flex-col items-center text-center h-full justify-between">
               {/* Icon */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#fbbf24] to-[#f59e0b] flex items-center justify-center mb-5 sm:mb-6 shrink-0">
@@ -571,7 +571,7 @@ function RegistrationSection() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLScr4E0k76LIyynAOh_WAspiY2sKHVgo7YVFBh5-LbGnFR5sBA/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fbbf24] rounded-full font-bold text-base sm:text-lg text-black hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
+                className="relative w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
               >
                 {/* Shimmer on hover */}
                 <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
@@ -583,16 +583,16 @@ function RegistrationSection() {
 
           {/* Badminton Card */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#10b981] hover:scale-105 transition-all duration-500 glow-emerald overflow-hidden"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#1e3a8a] hover:scale-105 transition-all duration-500 glow-navy overflow-hidden"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Animated gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#10b981]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             {/* Corner accent */}
-            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#10b981] to-transparent opacity-20 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#1e3a8a] to-transparent opacity-20 rounded-bl-full"></div>
             <div className="relative flex flex-col items-center text-center h-full justify-between">
               {/* Icon */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#10b981] to-[#059669] flex items-center justify-center mb-5 sm:mb-6 shrink-0">
@@ -620,7 +620,7 @@ function RegistrationSection() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdjpYepeyMDOjWPC8ev-ejzUJuIep432EYNreIylFfwMq6KdQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#10b981] via-[#34d399] to-[#10b981] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
+                className="relative w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a] rounded-full font-bold text-base sm:text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
               >
                 {/* Shimmer on hover */}
                 <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
@@ -804,8 +804,8 @@ function ContactSection() {
   return (
     <section className="relative py-24 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-10 left-0 w-64 h-64 bg-[#fbbf24] rounded-full opacity-5 blur-3xl"></div>
-      <div className="absolute bottom-10 right-0 w-72 h-72 bg-[#10b981] rounded-full opacity-5 blur-3xl"></div>
+      <div className="absolute top-10 left-0 w-64 h-64 bg-[#dc2626] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-10 right-0 w-72 h-72 bg-[#1e3a8a] rounded-full opacity-10 blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -848,29 +848,29 @@ function ContactSection() {
         >
           {/* Contact Card 1 - Ammar */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#fbbf24] hover:scale-105 transition-all duration-500 overflow-hidden hover:shadow-[0_0_40px_rgba(251,191,36,0.3)]"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#dc2626] hover:scale-105 transition-all duration-500 overflow-hidden hover:shadow-[0_0_40px_rgba(220,38,38,0.3)]"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
           >
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#fbbf24]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             {/* Corner accent */}
-            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#fbbf24] to-transparent opacity-20 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#dc2626] to-transparent opacity-20 rounded-bl-full"></div>
             
             <div className="relative flex flex-col items-center text-center space-y-6">
               {/* Icon */}
               <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-20 group-hover:opacity-40 group-hover:scale-125 transition-all duration-500 blur-xl"></div>
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#fbbf24] to-[#f59e0b] flex items-center justify-center group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                  <Users className="w-10 h-10 sm:w-12 sm:h-12 text-black" />
+                <div className="absolute inset-0 rounded-full bg-[#dc2626] opacity-20 group-hover:opacity-40 group-hover:scale-125 transition-all duration-500 blur-xl"></div>
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#dc2626] to-[#ef4444] flex items-center justify-center group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                  <Users className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 </div>
               </div>
 
               {/* Name */}
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-[#fbbf24] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-[#dc2626] transition-colors">
                   Ammar Sadriwala
                 </h3>
                 <p className="text-sm text-gray-400 font-medium">Tournament Organizer</p>
@@ -879,7 +879,7 @@ function ContactSection() {
               {/* Phone */}
               <a
                 href="tel:+918080271202"
-                className="relative w-full px-6 py-4 bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fbbf24] rounded-full font-bold text-lg text-black hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
+                className="relative w-full px-6 py-4 bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#dc2626] rounded-full font-bold text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                 <span className="relative z-10 font-mono text-base sm:text-lg">+91 80802 71202</span>
@@ -889,29 +889,29 @@ function ContactSection() {
 
           {/* Contact Card 2 - Ibrahim */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#10b981] hover:scale-105 transition-all duration-500 overflow-hidden hover:shadow-[0_0_40px_rgba(16,185,129,0.3)]"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#1e3a8a] hover:scale-105 transition-all duration-500 overflow-hidden hover:shadow-[0_0_40px_rgba(30,58,138,0.3)]"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
           >
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#10b981]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             {/* Corner accent */}
-            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#10b981] to-transparent opacity-20 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#1e3a8a] to-transparent opacity-20 rounded-bl-full"></div>
             
             <div className="relative flex flex-col items-center text-center space-y-6">
               {/* Icon */}
               <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-[#10b981] opacity-20 group-hover:opacity-40 group-hover:scale-125 transition-all duration-500 blur-xl"></div>
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#10b981] to-[#059669] flex items-center justify-center group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <div className="absolute inset-0 rounded-full bg-[#1e3a8a] opacity-20 group-hover:opacity-40 group-hover:scale-125 transition-all duration-500 blur-xl"></div>
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6] flex items-center justify-center group-hover:rotate-6 transition-all duration-300 shadow-xl">
                   <Users className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 </div>
               </div>
 
               {/* Name */}
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-[#10b981] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-[#1e3a8a] transition-colors">
                   Ibrahim Sadriwala
                 </h3>
                 <p className="text-sm text-gray-400 font-medium">Tournament Organizer</p>
@@ -920,7 +920,7 @@ function ContactSection() {
               {/* Phone */}
               <a
                 href="tel:+919529781361"
-                className="relative w-full px-6 py-4 bg-gradient-to-r from-[#10b981] via-[#34d399] to-[#10b981] rounded-full font-bold text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
+                className="relative w-full px-6 py-4 bg-gradient-to-r from-[#1e3a8a] via-[#3b82f6] to-[#1e3a8a] rounded-full font-bold text-lg text-white hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group/btn shadow-xl hover:shadow-2xl"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                 <span className="relative z-10 font-mono text-base sm:text-lg">+91 95297 81361</span>
@@ -987,41 +987,31 @@ function Footer() {
           transition={{ duration: 0.6 }}
         >
           {/* Logo */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 mb-5 sm:mb-6">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 relative">
+          <div className="flex items-center justify-center mb-5 sm:mb-6">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 relative">
               <Image 
-                src="/dmws-logo.png?v=2" 
-                alt="DMWS" 
-                width={80} 
-                height={80}
-                className="w-full h-full object-contain"
-                unoptimized
-              />
-            </div>
-            <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 relative">
-              <Image 
-                src="/hizb-logo.png?v=2" 
-                alt="Hizb E Abbasi" 
-                width={64} 
-                height={64}
-                className="w-full h-full object-contain"
-                unoptimized
+                src="/dmws-main-logo.png" 
+                alt="DMWS - Dhule Mega Winter Sports" 
+                width={160} 
+                height={160}
+                className="w-full h-full object-contain drop-shadow-xl"
+                priority
               />
             </div>
           </div>
 
           {/* Text */}
-          <p className="text-gray-400 mb-2 text-sm sm:text-base">
-            Dhule Mega Winter Sports 2025
+          <p className="text-gray-400 mb-2 text-sm sm:text-base font-bold" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+            DHULE MEGA WINTER SPORTS 2025
           </p>
           <p className="text-gray-500 text-xs sm:text-sm mb-5 sm:mb-6">
-            Unity through Sports
+            Unity through Sports ⭐
           </p>
 
           {/* Copyright */}
           <div className="pt-5 sm:pt-6 border-t border-gray-800">
             <p className="text-gray-500 text-xs sm:text-sm">
-              © 2025 <span className="text-[#10b981] font-semibold">Hizb E Abbasi</span>. All rights reserved.
+              © 2025 <span className="text-[#dc2626] font-bold">Hizb E Abbasi Dhulia</span>. All rights reserved.
             </p>
           </div>
         </motion.div>
