@@ -352,7 +352,7 @@ function StatsSection() {
     { icon: Trophy, value: '2', label: 'Days of Action', color: '#dc2626' },
     { icon: Users, value: '100+', label: 'Players Expected', color: '#1e3a8a' },
     { icon: Target, value: '2', label: 'Sports Events', color: '#dc2626' },
-    { icon: Shield, value: '₹30K+', label: 'Exciting Gifts & Fun', color: '#1e3a8a' },
+    { icon: Shield, value: 'WIN', label: 'Exciting Gifts & Prizes', color: '#1e3a8a' },
   ];
 
   return (
