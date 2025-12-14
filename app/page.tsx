@@ -109,7 +109,7 @@ function HeroSection() {
             <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] relative">
               <Image 
                 src="/dmws-main-logo.png" 
-                alt="DMWS - Dhule Mega Winter Sports 2025" 
+                alt="DMWS - Dhulia Mega Winter Sports 2025" 
                 width={500} 
                 height={500}
                 className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.3)]"
@@ -412,7 +412,7 @@ function StatsSection() {
 // Captains Section Component
 function CaptainsSection() {
   const captains = [
-    { name: 'Mohammad Bhai Patel', id: 1 },
+    { name: 'Taher Bhai Unique', id: 1 },
     { name: 'Hussain Bhai Bandukwala', id: 2 },
     { name: 'Murtaza Bhai Bharmal', id: 3 },
     { name: 'Abdeali Sadriwala', id: 4 },
@@ -715,7 +715,7 @@ function FAQSection() {
     },
     {
       question: 'What should I bring?',
-      answer: 'Players should bring their own sports equipment, water bottles, and valid ID proof for registration.'
+      answer: 'Bring in Your enthusiasm, and a positive attitude!'
     },
     {
       question: 'Is there a prize for winners?',
