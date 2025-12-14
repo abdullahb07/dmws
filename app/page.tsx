@@ -100,33 +100,20 @@ function HeroSection() {
 
           {/* Logo Section */}
           <motion.div 
-            className="flex flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 mb-10 sm:mb-12"
+            className="flex items-center justify-center mb-10 sm:mb-12"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            {/* DMWS Logo */}
-            <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 shrink-0 relative">
+            {/* DMWS Main Logo */}
+            <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] relative">
               <Image 
-                src="/dmws-logo.png?v=2" 
-                alt="DMWS Logo" 
-                width={208} 
-                height={208}
-                className="w-full h-full object-contain drop-shadow-2xl"
+                src="/dmws-main-logo.png" 
+                alt="DMWS - Dhule Mega Winter Sports 2025" 
+                width={500} 
+                height={500}
+                className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.3)]"
                 priority
-                unoptimized
-              />
-            </div>
-            {/* Hizb E Abbasi Logo */}
-            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 relative">
-              <Image 
-                src="/hizb-logo.png?v=2" 
-                alt="Hizb E Abbasi Logo" 
-                width={192} 
-                height={192}
-                className="w-full h-full object-contain drop-shadow-2xl"
-                priority
-                unoptimized
               />
             </div>
           </motion.div>
@@ -540,6 +527,7 @@ function RegistrationSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+
             {/* Animated gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             {/* Corner accent */}
