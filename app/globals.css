@@ -53,3 +53,32 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Snowfall Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px);
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall linear infinite;
+}
+
+/* 3D Transform Effects */
+.transform-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+}

@@ -3,6 +3,48 @@
 import { motion } from 'framer-motion';
 import { Trophy, Users, MapPin, Calendar, Shield, Target, ChevronRight, AlertCircle, Instagram } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+
+// Snowfall Component
+function Snowfall() {
+  const [snowflakes, setSnowflakes] = useState<Array<{ id: number; left: number; animationDuration: number; opacity: number; size: number }>>([]);
+
+  useEffect(() => {
+    const flakes = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      animationDuration: Math.random() * 3 + 5,
+      opacity: Math.random() * 0.6 + 0.3,
+      size: Math.random() * 4 + 2,
+    }));
+    setSnowflakes(flakes);
+  }, []);
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+      {snowflakes.map((flake) => (
+        <div
+          key={flake.id}
+          className="absolute animate-snowfall"
+          style={{
+            left: `${flake.left}%`,
+            animationDuration: `${flake.animationDuration}s`,
+            animationDelay: `${Math.random() * 5}s`,
+            opacity: flake.opacity,
+          }}
+        >
+          <div
+            className="rounded-full bg-white blur-[1px]"
+            style={{
+              width: `${flake.size}px`,
+              height: `${flake.size}px`,
+            }}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 // Animation variants
 const fadeInUp = {
@@ -22,6 +64,9 @@ const staggerContainer = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0f172a]">
+      {/* Snowfall Effect */}
+      <Snowfall />
+      
       {/* Hero Section */}
       <HeroSection />
       
@@ -103,10 +148,12 @@ function HeroSection() {
 
           {/* Logo Section */}
           <motion.div 
-            className="flex items-center justify-center mb-10 sm:mb-12"
+            className="flex items-center justify-center mb-10 sm:mb-12 transform-3d"
+            style={{ perspective: '1000px', transformStyle: 'preserve-3d' }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.05, rotateY: 5 }}
           >
             {/* DMWS Main Logo */}
             <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] relative">
@@ -115,7 +162,7 @@ function HeroSection() {
                 alt="DMWS - Dhulia Mega Winter Sports 2025" 
                 width={500} 
                 height={500}
-                className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.3)]"
+                className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.3)] transition-transform duration-500"
                 priority
               />
             </div>
@@ -376,12 +423,13 @@ function StatsSection() {
             return (
               <motion.div
                 key={index}
-                className="relative group glass rounded-2xl p-6 sm:p-8 border-2 border-gray-700 hover:scale-110 transition-all duration-500 overflow-hidden"
+                className="relative group glass rounded-2xl p-6 sm:p-8 border-2 border-gray-700 hover:scale-110 transition-all duration-500 overflow-hidden transform-3d"
+                style={{ '--stat-color': stat.color, transformStyle: 'preserve-3d' } as React.CSSProperties}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                style={{ '--stat-color': stat.color } as React.CSSProperties}
+                whileHover={{ rotateY: 10, rotateX: 10, scale: 1.1 }}
               >
                 {/* Hover gradient */}
                 <div 
@@ -524,11 +572,13 @@ function RegistrationSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Cricket Card */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#dc2626] hover:scale-105 transition-all duration-500 glow-red overflow-hidden"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#dc2626] hover:scale-105 transition-all duration-500 glow-red overflow-hidden transform-3d card-3d"
+            style={{ transformStyle: 'preserve-3d' }}
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            whileHover={{ rotateY: 5, rotateX: 5 }}
           >
 
             {/* Animated gradient overlay */}
@@ -574,11 +624,13 @@ function RegistrationSection() {
 
           {/* Badminton Card */}
           <motion.div
-            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#1e3a8a] hover:scale-105 transition-all duration-500 glow-navy overflow-hidden"
+            className="relative group glass rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#1e3a8a] hover:scale-105 transition-all duration-500 glow-navy overflow-hidden transform-3d card-3d"
+            style={{ transformStyle: 'preserve-3d' }}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            whileHover={{ rotateY: -5, rotateX: 5 }}
           >
             {/* Animated gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -851,12 +903,13 @@ function InstagramSection() {
               href={account.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative"
+              className="group relative transform-3d"
+              style={{ transformStyle: 'preserve-3d' }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              whileHover={{ y: -8 }}
+              whileHover={{ y: -8, rotateY: index === 0 ? 5 : -5, rotateX: 5 }}
             >
               {/* Card Background */}
               <div className="relative glass rounded-3xl p-8 sm:p-10 border-2 border-gray-700 group-hover:border-opacity-0 transition-all duration-500 overflow-hidden">
