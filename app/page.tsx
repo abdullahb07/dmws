@@ -462,13 +462,99 @@ function StatsSection() {
 
 // Captains Section Component
 function CaptainsSection() {
-  const captains = [
-    { name: 'Taher Bhai Unique', id: 1 },
-    { name: 'Hussain Bhai Bandukwala', id: 2 },
-    { name: 'Murtaza Bhai Bharmal', id: 3 },
-    { name: 'Abdeali Sadriwala', id: 4 },
-    { name: 'Abbas Bhai Jawadwala', id: 5 },
-    { name: 'Abbas Bhai Saifee', id: 6 },
+  const [selectedTeam, setSelectedTeam] = useState<number | null>(null);
+  
+  const teams = [
+    {
+      id: 1,
+      name: 'Damdaar Tigers',
+      captain: 'Taher Bhai Unique',
+      logo: '/images/damdaar-tigers.png',
+      color: '#dc2626',
+      players: [
+        'M Quaidjohar M T Dhulawala',
+        'Qusai Sadriwala',
+        'Hakim Abdeali Sadriwala',
+        'Muffadal Icewala',
+        'Mustafa Dhulawala',
+        'Hakim Hatim Sadriwala'
+      ]
+    },
+    {
+      id: 2,
+      name: 'Dhulia Dynamos',
+      captain: 'Hussain Bhai Bandukwala',
+      logo: '/images/dhulia-dynamos.png',
+      color: '#f59e0b',
+      players: [
+        'Abdlaqdir Saifee',
+        'Yusuf Engineer',
+        'Aziz Bookwala',
+        'Burhanuddin Yusuf Sadriwala',
+        'Mustafa Sadriwala',
+        'Abdulqadir Sakriwala'
+      ]
+    },
+    {
+      id: 3,
+      name: 'Badshah Strikers',
+      captain: 'Abbas Bhai Jawadwala',
+      logo: '/images/badshah-strikers.png',
+      color: '#10b981',
+      players: [
+        'Hashim Songirwala',
+        'Idris Saifee',
+        'Ammar kanor',
+        'Murtaza Patel',
+        'Mustafa Shirpurwala',
+        'Taher Ezzy'
+      ]
+    },
+    {
+      id: 4,
+      name: 'Haideri Smashers',
+      captain: 'Murtaza Bhai Kaderl',
+      logo: '/images/haideri-smashers.png',
+      color: '#8b5cf6',
+      players: [
+        'Mustafa Rangrezwala',
+        'Hatim MF Sadriwala',
+        'Hatim Jaigaon',
+        'Mustafa Saifee',
+        'Murtaza Uncle Patel',
+        'Hussain Saifee'
+      ]
+    },
+    {
+      id: 5,
+      name: 'Dabangg Warriors',
+      captain: 'Murtaza Bhai Bharmel',
+      logo: '/images/dabangg-warriors.png',
+      color: '#3b82f6',
+      players: [
+        'Adnan Saifee',
+        'Taher Songirwala',
+        'Mustansir Mandvi',
+        'Hatim Boradi',
+        'Murtaza Uncle Patel',
+        'Mohammed Dhulia'
+      ]
+    },
+    {
+      id: 6,
+      name: 'Ali Legends',
+      captain: 'Abdeali Bhai Sadriwala',
+      logo: '/images/ali-legends.png',
+      color: '#ec4899',
+      players: [
+        'Huzaifa Nardanawala',
+        'Taha Sadriwala',
+        'Yusuf unique',
+        'Aziz Mandvi',
+        'Shk Amir kaderl',
+        'Burhanuddin Sadriwala'
+      ]
+    }
   ];
 
   return (
@@ -489,13 +575,13 @@ function CaptainsSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-[#fbbf24] to-[#10b981] bg-clip-text text-transparent">
-              Meet the Captains
+              Cricket Teams
             </span>
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg">🏏 Cricket Team Leaders</p>
+          <p className="text-gray-400 text-base sm:text-lg">🏏 Click on a captain to view team details</p>
         </motion.div>
 
-        {/* Captains Grid */}
+        {/* Teams Grid */}
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
           variants={staggerContainer}
@@ -503,37 +589,148 @@ function CaptainsSection() {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          {captains.map((captain, index) => (
+          {teams.map((team, index) => (
             <motion.div
-              key={captain.id}
-              className="relative glass rounded-2xl p-8 sm:p-10 hover:scale-110 transition-all duration-500 group cursor-pointer border-2 border-gray-700 hover:border-[#dc2626] h-full flex flex-col items-center justify-center overflow-hidden hover:shadow-[0_0_40px_rgba(220,38,38,0.4)]"
+              key={team.id}
+              className="relative glass rounded-2xl p-6 sm:p-8 hover:scale-105 transition-all duration-500 group cursor-pointer border-2 border-gray-700 hover:border-[#dc2626] h-full flex flex-col overflow-hidden hover:shadow-[0_0_40px_rgba(220,38,38,0.4)]"
               variants={fadeInUp}
+              onClick={() => setSelectedTeam(team.id)}
+              style={{
+                borderColor: selectedTeam === team.id ? team.color : undefined
+              }}
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              {/* Captain Number Badge */}
-              <div className="mb-4 relative">
-                {/* Pulse ring on hover */}
-                <div className="absolute inset-0 rounded-full bg-[#dc2626] opacity-0 group-hover:opacity-30 group-hover:scale-150 transition-all duration-500 blur-md"></div>
-                <div className="relative inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#dc2626] via-[#ef4444] to-[#dc2626] text-white font-black text-lg sm:text-xl group-hover:glow-red transition-all group-hover:rotate-12 shadow-lg">
-                  {index + 1}
+              
+              {/* Team Logo */}
+              <div className="mb-4 relative flex justify-center">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 relative">
+                  <Image 
+                    src={team.logo} 
+                    alt={`${team.name} Logo`}
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-contain drop-shadow-lg"
+                  />
                 </div>
               </div>
 
-              {/* Captain Name */}
-              <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-center text-white group-hover:text-[#dc2626] transition-colors leading-tight">
-                {captain.name}
-                {/* Animated underline */}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#dc2626] to-[#ef4444] group-hover:w-full transition-all duration-500"></span>
+              {/* Team Name */}
+              <h3 className="relative text-xl sm:text-2xl font-black text-center text-white mb-2">
+                {team.name}
               </h3>
               
-              {/* Caption */}
-              <p className="text-gray-400 text-sm sm:text-base mt-3 font-medium">
-                Team Captain
+              {/* Captain Badge */}
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Shield className="w-4 h-4 text-[#fbbf24]" />
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Captain</span>
+              </div>
+
+              {/* Captain Name */}
+              <p className="text-center text-base sm:text-lg font-bold text-[#dc2626] group-hover:text-[#ef4444] transition-colors mb-4">
+                {team.captain}
               </p>
+
+              {/* View Team Button */}
+              <div className="mt-auto pt-4 border-t border-gray-700">
+                <div className="flex items-center justify-center gap-2 text-sm text-gray-400 group-hover:text-white transition-colors">
+                  <Users className="w-4 h-4" />
+                  <span>Click to view team</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Team Details Modal */}
+        {selectedTeam && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedTeam(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="relative glass rounded-3xl p-8 sm:p-10 max-w-2xl w-full max-h-[90vh] overflow-y-auto border-2"
+              style={{
+                borderColor: teams.find(t => t.id === selectedTeam)?.color
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedTeam(null)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-white transition-colors"
+              >
+                ✕
+              </button>
+
+              {(() => {
+                const team = teams.find(t => t.id === selectedTeam);
+                if (!team) return null;
+
+                return (
+                  <>
+                    {/* Team Logo */}
+                    <div className="text-center mb-6">
+                      <div className="flex justify-center mb-4">
+                        <div className="w-32 h-32 sm:w-40 sm:h-40 relative">
+                          <Image 
+                            src={team.logo} 
+                            alt={`${team.name} Logo`}
+                            width={160}
+                            height={160}
+                            className="w-full h-full object-contain drop-shadow-2xl"
+                          />
+                        </div>
+                      </div>
+                      <h3 className="text-3xl sm:text-4xl font-black text-white mb-2">
+                        {team.name}
+                      </h3>
+                      <div className="flex items-center justify-center gap-2 mb-4">
+                        <Shield className="w-5 h-5" style={{ color: team.color }} />
+                        <span className="text-sm text-gray-400 uppercase tracking-wider">Team Captain</span>
+                      </div>
+                      <p className="text-xl sm:text-2xl font-bold" style={{ color: team.color }}>
+                        {team.captain}
+                      </p>
+                    </div>
+
+                    {/* Players List */}
+                    <div className="mt-8">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Users className="w-5 h-5 text-[#fbbf24]" />
+                        <h4 className="text-lg sm:text-xl font-bold text-white">Team Members</h4>
+                      </div>
+                      <div className="space-y-3">
+                        {team.players.map((player, idx) => (
+                          <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="flex items-center gap-3 p-3 rounded-xl bg-gray-800/50 hover:bg-gray-800 transition-colors"
+                          >
+                            <div
+                              className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                              style={{ backgroundColor: team.color }}
+                            >
+                              {idx + 1}
+                            </div>
+                            <span className="text-white text-sm sm:text-base">{player}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
